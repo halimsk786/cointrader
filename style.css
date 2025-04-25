@@ -1,0 +1,171 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+header {
+    background-color: #1E2A3C;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+body.light-mode header {
+    background-color: #ddd;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.menu-icon, .search-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.filter-options button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #00C4B4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .filter-options button {
+    color: black;
+    border-color: #00C4B4;
+}
+
+.filter-options button.active {
+    background-color: #00C4B4;
+    color: white;
+}
+
+body.light-mode .filter-options button.active {
+    background-color: #00C4B4;
+    color: black;
+}
+
+.crypto-list {
+    padding: 10px;
+}
+
+.crypto-item {
+    background-color: #1E2A3C;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .crypto-item {
+    background-color: #ddd;
+    color: black;
+}
+
+.exchange-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: gray; /* Placeholder */
+}
+
+.ticker-info {
+    flex-grow: 1;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.percentage-change {
+    font-size: 14px;
+}
+
+.percentage-change.positive {
+    color: green;
+}
+
+.percentage-change.negative {
+    color: red;
+}
+
+.add-ticker-button {
+    background-color: #00C4B4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .add-ticker-button {
+    color: black;
+}
+
+nav {
+    background-color: #1E2A3C;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s;
+}
+
+body.light-mode nav {
+    background-color: #ddd;
+}
+
+nav a {
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+body.light-mode nav a {
+    color: gray;
+}
+
+nav a.active {
+    color: white;
+}
+
+body.light-mode nav a.active {
+    color: black;
+}
+
+body.menu-open {
+    transform: translateX(200px);
+}
